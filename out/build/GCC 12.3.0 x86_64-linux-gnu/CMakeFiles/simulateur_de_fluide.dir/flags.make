@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad -I/home/guy/Bureau/simulateur-de-fluide/externe/glm
+C_INCLUDES = -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm
 
 C_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad -I/home/guy/Bureau/simulateur-de-fluide/externe/glm
+CXX_INCLUDES = -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm
 
 CXX_FLAGS = -g -std=gnu++17
 

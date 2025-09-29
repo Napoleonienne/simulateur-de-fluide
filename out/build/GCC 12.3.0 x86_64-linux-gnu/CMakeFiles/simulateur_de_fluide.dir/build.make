@@ -108,7 +108,6 @@ simulateur_de_fluide_EXTERNAL_OBJECTS =
 simulateur_de_fluide: CMakeFiles/simulateur_de_fluide.dir/externe/glad/src/glad.c.o
 simulateur_de_fluide: CMakeFiles/simulateur_de_fluide.dir/src/main.cpp.o
 simulateur_de_fluide: CMakeFiles/simulateur_de_fluide.dir/build.make
-simulateur_de_fluide: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 simulateur_de_fluide: CMakeFiles/simulateur_de_fluide.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/guy/Bureau/simulateur-de-fluide/out/build/GCC 12.3.0 x86_64-linux-gnu/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable simulateur_de_fluide"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simulateur_de_fluide.dir/link.txt --verbose=$(VERBOSE)

@@ -1,26 +1,37 @@
 cmake_minimum_required(VERSION 3.15)
 project(FluidEngineProject)
 
-# Utiliser C++17 ou plus
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# --- Includes ---
 include_directories(
-    include 
-    externe/glad/
+    include
+    externe/glad/include
     externe/glm
 )
 
-find_package(glfw3 3.3 REQUIRED)
-
-# Fichiers sources
+# --- Sources ---
 file(GLOB_RECURSE SOURCES
     src/*.cpp
     externe/glad/src/glad.c
 )
 
-# Créer l'exécutable (donne un nom sans espaces)
+# --- Executable ---
 add_executable(simulateur_de_fluide ${SOURCES})
 
-# Lier les librairies nécessaires
-target_link_libraries(simulateur_de_fluide glfw GL)
+# --- GLFW via pkg-config ---
+find_package(PkgConfig REQUIRED)
+pkg_search_module(GLFW REQUIRED glfw3)
+
+if(GLFW_FOUND)
+    include_directories(${GLFW_INCLUDE_DIRS})
+    link_directories(${GLFW_LIBRARY_DIRS})
+    target_link_libraries(simulateur_de_fluide
+        ${GLFW_LIBRARIES}   # glfw
+        GL                  # OpenGL
+        X11 Xrandr Xi Xxf86vm Xcursor pthread dl m  # dépendances Linux
+    )
+else()
+    message(FATAL_ERROR "GLFW not found. Install it and try again.")
+endif()

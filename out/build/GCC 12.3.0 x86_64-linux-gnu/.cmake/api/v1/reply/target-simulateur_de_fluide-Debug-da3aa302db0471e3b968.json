@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 21,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 26,
+				"line" : 30,
 				"parent" : 0
 			},
 			{
@@ -60,7 +60,7 @@
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/guy/Bureau/simulateur-de-fluide/externe/glad"
+					"path" : "/home/guy/Bureau/simulateur-de-fluide/externe/glad/include"
 				},
 				{
 					"backtrace" : 3,
@@ -91,7 +91,7 @@
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/guy/Bureau/simulateur-de-fluide/externe/glad"
+					"path" : "/home/guy/Bureau/simulateur-de-fluide/externe/glad/include"
 				},
 				{
 					"backtrace" : 3,
@@ -132,12 +132,52 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libglfw.so.3.3",
+				"fragment" : "-lglfw",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
 				"fragment" : "-lGL",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lX11",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lXrandr",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lXi",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lXxf86vm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lXcursor",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lm",
 				"role" : "libraries"
 			}
 		],
