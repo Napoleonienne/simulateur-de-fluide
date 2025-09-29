@@ -177,6 +177,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulateur_de_fluide.dir/build.make CMakeFiles/simulateur_de_fluide.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/particule.o: src/particule.cpp.o
+.PHONY : src/particule.o
+
+# target to build an object file
+src/particule.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulateur_de_fluide.dir/build.make CMakeFiles/simulateur_de_fluide.dir/src/particule.cpp.o
+.PHONY : src/particule.cpp.o
+
+src/particule.i: src/particule.cpp.i
+.PHONY : src/particule.i
+
+# target to preprocess a source file
+src/particule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulateur_de_fluide.dir/build.make CMakeFiles/simulateur_de_fluide.dir/src/particule.cpp.i
+.PHONY : src/particule.cpp.i
+
+src/particule.s: src/particule.cpp.s
+.PHONY : src/particule.s
+
+# target to generate assembly for a file
+src/particule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulateur_de_fluide.dir/build.make CMakeFiles/simulateur_de_fluide.dir/src/particule.cpp.s
+.PHONY : src/particule.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/particule.o"
+	@echo "... src/particule.i"
+	@echo "... src/particule.s"
 .PHONY : help
 
 
