@@ -5,7 +5,7 @@ project(FluidEngineProject)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(include extern/glad/include extern/glm)
+include_directories(include extern/glad/include extern/glm-1.0.1-light)
 
 find_package(glfw3 3.3 REQUIRED)
 
