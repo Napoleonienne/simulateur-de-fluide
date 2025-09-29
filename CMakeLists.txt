@@ -5,18 +5,22 @@ project(FluidEngineProject)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(include extern/glad/include extern/glm-1.0.1-light)
+include_directories(
+    include 
+    externe/glad/
+    externe/glm
+)
 
 find_package(glfw3 3.3 REQUIRED)
 
 # Fichiers sources
 file(GLOB_RECURSE SOURCES
     src/*.cpp
-    extern/glad/src/glad.c
+    externe/glad/src/glad.c
 )
 
-# Créer l'exécutable
-add_executable(${PROJECT_NAME} ${SOURCES})
+# Créer l'exécutable (donne un nom sans espaces)
+add_executable(simulateur_de_fluide ${SOURCES})
 
 # Lier les librairies nécessaires
-target_link_libraries(${PROJECT_NAME} glfw GL)
+target_link_libraries(simulateur_de_fluide glfw GL)
