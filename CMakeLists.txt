@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 3.15)
 project(FluidEngineProject)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # --- Includes ---
 include_directories(
     include
+    ${CMAKE_SOURCE_DIR}/include
     externe/glad/include
     externe/glm
 )

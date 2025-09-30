@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/simulateur_de_fluide.dir/src/main.cpp.o.d"
   "CMakeFiles/simulateur_de_fluide.dir/src/particule.cpp.o"
   "CMakeFiles/simulateur_de_fluide.dir/src/particule.cpp.o.d"
+  "CMakeFiles/simulateur_de_fluide.dir/src/shader.cpp.o"
+  "CMakeFiles/simulateur_de_fluide.dir/src/shader.cpp.o.d"
   "simulateur_de_fluide"
   "simulateur_de_fluide.pdb"
 )

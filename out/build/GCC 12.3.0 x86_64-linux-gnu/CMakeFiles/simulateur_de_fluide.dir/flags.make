@@ -13,5 +13,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm
 
-CXX_FLAGS = -g -std=gnu++17
+CXX_FLAGS = -g -std=gnu++23
 
