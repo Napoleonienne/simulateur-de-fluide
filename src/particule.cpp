@@ -26,12 +26,6 @@ public:
 };
 
 
-class particule {
-public:
-    particule(const std::array<float, 3> &pos, float viscosité, float vitesse, float masse, float densité, float pression) {
-        std::cout << "Constructeur particule" << std::endl;
-    }
-};
 
 // Classe 2D : ignore la coordonnée z
 class particule2d : public particule {
