@@ -38,7 +38,7 @@ int main()
     float fov= 45.0f;
 
     glm::mat4 proj = glm::perspective(glm::radians(fov), (float)l/(float)h, 0.1f, 100.0f);
-    float triangle[] ={
+    float triangle[9] ={
      0.3f,  0.7f, 0.0f,
     -0.8f, -0.2f, 0.0f,
      0.4f, -0.9f, 0.0f

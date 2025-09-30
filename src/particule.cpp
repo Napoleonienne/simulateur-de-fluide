@@ -19,7 +19,9 @@ public:
         this->densité = densité;
         this->pression = pression;
     }
-
+    std::array<float, 3> get(){
+        return pos;
+    }
 
 };
 
