@@ -1,6 +1,5 @@
 #include <glad/glad.h>
 #include <vector>
-static unsigned int compteur = 0;
 std::vector<float> k;
  
 class triangle{
@@ -8,22 +7,20 @@ class triangle{
     static GLuint VAO;
     static unsigned int compteur;
     compteur ++;
-    static std::vector<float> k;
+    static std::vector<float> totale_vertice;
     public: 
         triangle(const float x,const float y,const float z,const float largeur,const float hauteur){
-            
+        
        std::vector<float> forme ={
                 (x+(largeur/2)),  (y), z,
                 (x+(largeur/2)), (y), z,
                 (x), (y+hauteur), z
                 };
-
-        k.insert(k.end(),forme.begin(),forme.end());
+        totale_vertice.insert(k.end(),forme.begin(),forme.end());
             
-            
+        
 };
 
-//probleme les triangle on tous le meme shader gl enable vertex est un peu merdique  
         void draw(){
             glGenVertexArrays(compteur, &VAO);
             glGenBuffers(compteur, &VBO);
