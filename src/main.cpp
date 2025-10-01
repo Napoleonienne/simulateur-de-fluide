@@ -4,6 +4,8 @@
 #include <glm.hpp>
 #include <matrix.hpp>
 #include <ext/matrix_clip_space.hpp>
+#include <glm.hpp>
+#include <glm/ext/ca
 #include "shader.cpp"
 
 
@@ -37,7 +39,8 @@ int main()
     #endif
     float fov= 45.0f;
 
-    glm::mat4 proj = glm::perspective(glm::radians(fov), (float)l/(float)h, 0.1f, 100.0f);
+    glm::mat4 perspertives = glm::perspective(glm::radians(fov), (float)l/(float)h, 0.1f, 100.0f);
+    glm::mat4 camera = glm::came
     float triangle[9] ={
      0.3f,  0.7f, 0.0f,
     -0.8f, -0.2f, 0.0f,
@@ -54,8 +57,9 @@ int main()
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-
-    Shader shader_triangle  = Shader("shader/vertex/tr.vs","shader/fragmen/tr.fs");
+    const char *vs = "/home/guy/Bureau/simulateur-de-fluide/shader";
+    const char *fs = "/home/guy/Bureau/simulateur-de-fluide/shader/fragmen/tr.fs";
+    Shader shader_triangle  = Shader(vs,fs);
 
 
 
@@ -71,10 +75,12 @@ int main()
         processInput(window);//p
         glClearColor(0.749f, 0.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        shader_triangle.use();
 
 
+    
         glDrawArrays(GL_TRIANGLES, 0, 3);
+                shader_triangle.use();
+
         glfwSwapBuffers(window);//d
     }
     glDeleteBuffers(1,&VBO);

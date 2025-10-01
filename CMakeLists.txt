@@ -10,6 +10,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/include
     externe/glad/include
     externe/glm
+    externe/
 )
 
 # --- Sources ---

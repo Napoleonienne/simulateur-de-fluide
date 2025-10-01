@@ -1,8 +1,6 @@
 #version 460 core
 layout (location = 0) in vec3 pos;
-out
-
-
+out vec4 gl_Position
 
 void main()
 {

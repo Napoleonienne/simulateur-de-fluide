@@ -45,10 +45,3 @@ public:
     }
 };
 
-int main() {
-    std::array<float,2> pos2d = {1.0f, 2.0f};
-    particule2d p2(pos2d, 0.1f, 5.0f, 1.0f, 1000.0f, 0.5f);
-
-    std::array<float,3> pos3d = {1.0f, 2.0f, 3.0f};
-    particule3d p3(pos3d, 0.2f, 6.0f, 2.0f, 1200.0f, 0.8f);
-}
