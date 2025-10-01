@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/guy/Bureau/simulateur-de-fluide/build",
+  "command": "/usr/bin/gcc-12  -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm -I/home/guy/Bureau/simulateur-de-fluide/externe -g -o CMakeFiles/simulateur_de_fluide.dir/externe/glad/src/glad.c.o -c /home/guy/Bureau/simulateur-de-fluide/externe/glad/src/glad.c",
+  "file": "/home/guy/Bureau/simulateur-de-fluide/externe/glad/src/glad.c"
+},
+{
+  "directory": "/home/guy/Bureau/simulateur-de-fluide/build",
+  "command": "/usr/bin/c++  -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm -I/home/guy/Bureau/simulateur-de-fluide/externe -g -std=gnu++23 -o CMakeFiles/simulateur_de_fluide.dir/src/main.cpp.o -c /home/guy/Bureau/simulateur-de-fluide/src/main.cpp",
+  "file": "/home/guy/Bureau/simulateur-de-fluide/src/main.cpp"
+},
+{
+  "directory": "/home/guy/Bureau/simulateur-de-fluide/build",
+  "command": "/usr/bin/c++  -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm -I/home/guy/Bureau/simulateur-de-fluide/externe -g -std=gnu++23 -o CMakeFiles/simulateur_de_fluide.dir/src/particule.cpp.o -c /home/guy/Bureau/simulateur-de-fluide/src/particule.cpp",
+  "file": "/home/guy/Bureau/simulateur-de-fluide/src/particule.cpp"
+},
+{
+  "directory": "/home/guy/Bureau/simulateur-de-fluide/build",
+  "command": "/usr/bin/c++  -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm -I/home/guy/Bureau/simulateur-de-fluide/externe -g -std=gnu++23 -o CMakeFiles/simulateur_de_fluide.dir/src/shader.cpp.o -c /home/guy/Bureau/simulateur-de-fluide/src/shader.cpp",
+  "file": "/home/guy/Bureau/simulateur-de-fluide/src/shader.cpp"
+},
+{
+  "directory": "/home/guy/Bureau/simulateur-de-fluide/build",
+  "command": "/usr/bin/c++  -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm -I/home/guy/Bureau/simulateur-de-fluide/externe -g -std=gnu++23 -o CMakeFiles/simulateur_de_fluide.dir/src/solveur.cpp.o -c /home/guy/Bureau/simulateur-de-fluide/src/solveur.cpp",
+  "file": "/home/guy/Bureau/simulateur-de-fluide/src/solveur.cpp"
+},
+{
+  "directory": "/home/guy/Bureau/simulateur-de-fluide/build",
+  "command": "/usr/bin/c++  -I/home/guy/Bureau/simulateur-de-fluide/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glad/include -I/home/guy/Bureau/simulateur-de-fluide/externe/glm -I/home/guy/Bureau/simulateur-de-fluide/externe -g -std=gnu++23 -o CMakeFiles/simulateur_de_fluide.dir/src/triangle.cpp.o -c /home/guy/Bureau/simulateur-de-fluide/src/triangle.cpp",
+  "file": "/home/guy/Bureau/simulateur-de-fluide/src/triangle.cpp"
+}
+]

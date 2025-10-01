@@ -5,7 +5,6 @@
 #include <matrix.hpp>
 #include <ext/matrix_clip_space.hpp>
 #include <glm.hpp>
-#include <glm/ext/ca
 #include "shader.cpp"
 
 
@@ -40,7 +39,6 @@ int main()
     float fov= 45.0f;
 
     glm::mat4 perspertives = glm::perspective(glm::radians(fov), (float)l/(float)h, 0.1f, 100.0f);
-    glm::mat4 camera = glm::came
     float triangle[9] ={
      0.3f,  0.7f, 0.0f,
     -0.8f, -0.2f, 0.0f,
