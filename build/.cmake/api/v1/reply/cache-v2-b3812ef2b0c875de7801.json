@@ -39,7 +39,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ..."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "STRING",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/guy/Bureau/simulateur-de-fluide/out/build/GCC 12.3.0 x86_64-linux-gnu"
+			"value" : "/home/guy/Bureau/simulateur-de-fluide/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -526,16 +526,12 @@
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
-					"value" : "Enable/Disable output of compile commands during generation."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "BOOL",
-			"value" : ""
+			"value" : "TRUE"
 		},
 		{
 			"name" : "CMAKE_EXTRA_GENERATOR",
@@ -619,7 +615,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/guy/Bureau/simulateur-de-fluide/out/install/GCC 12.3.0 x86_64-linux-gnu"
+			"value" : "/usr/local"
 		},
 		{
 			"name" : "CMAKE_INSTALL_SO_NO_EXE",
@@ -1155,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/guy/Bureau/simulateur-de-fluide/out/build/GCC 12.3.0 x86_64-linux-gnu"
+			"value" : "/home/guy/Bureau/simulateur-de-fluide/build"
 		},
 		{
 			"name" : "FluidEngineProject_IS_TOP_LEVEL",
