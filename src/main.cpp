@@ -6,6 +6,7 @@
 #include <ext/matrix_clip_space.hpp>
 #include <glm.hpp>
 #include "shader.cpp"
+#include "triangle.h"
 
 
 const uint16_t h = 800, l = 600;
@@ -74,14 +75,17 @@ int main()
         glClearColor(0.749f, 0.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        shader_triangle.use();
 
-    
+        glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
-                shader_triangle.use();
 
         glfwSwapBuffers(window);//d
+        glfwPollEvents();
     }
     glDeleteBuffers(1,&VBO);
+    glDeleteVertexArrays(1, &VAO);
+
 
     glfwTerminate();
     return 0;
