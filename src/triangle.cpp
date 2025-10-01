@@ -6,7 +6,8 @@ std::vector<float> k;
 class triangle{
     static GLuint VBO;
     static GLuint VAO;
-    static unsigned int compteur = compteur+ 1;
+    static unsigned int compteur;
+    compteur ++;
     static std::vector<float> k;
     public: 
         triangle(const float x,const float y,const float z,const float largeur,const float hauteur){
