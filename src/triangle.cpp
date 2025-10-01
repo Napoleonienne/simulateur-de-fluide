@@ -1,35 +1,37 @@
 #include <glad/glad.h>
-
+#include <vector>
+static unsigned int compteur = 0;
+std::vector<float> k;
  
 class triangle{
     static GLuint VBO;
     static GLuint VAO;
-    static unsigned int compteur;
-    public:
-        triangle(float x,float y,float z,float largeur,float hauteur){
-            float p1=;
-            float p2=;
-            float p3=;
-
-
-
-            float forme[9] ={
-                0.3f,  0.7f, 0.0f,
-                -0.8f, -0.2f, 0.0f,
-                0.4f, -0.9f, 0.0f
+    static unsigned int compteur = compteur+ 1;
+    static std::vector<float> k;
+    public: 
+        triangle(const float x,const float y,const float z,const float largeur,const float hauteur){
+            
+       std::vector<float> forme ={
+                (x+(largeur/2)),  (y), z,
+                (x+(largeur/2)), (y), z,
+                (x), (y+hauteur), z
                 };
-            }
-        void tr(){
+
+        k.insert(k.end(),forme.begin(),forme.end());
+            
+            
+};
+
+//probleme les triangle on tous le meme shader gl enable vertex est un peu merdique  
+        void draw(){
             glGenVertexArrays(compteur, &VAO);
             glGenBuffers(compteur, &VBO);
 
             glBindVertexArray(VAO);
 
             glBindBuffer(GL_ARRAY_BUFFER, VBO);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(triangle), triangle, GL_STATIC_DRAW);
-
-
-
+            glBufferData(GL_ARRAY_BUFFER,( k.size()*sizeof(float) ), k.data() , GL_STATIC_DRAW);
+            glEnableVertexAttribArray(0);
 
         }
 
@@ -39,11 +41,5 @@ class triangle{
 
 
 
-        }
+        };
         
-
-
-
-
-
-}
