@@ -1,75 +1,54 @@
- Created by https://www.toptal.com/developers/gitignore/api/c++,visualstudiocode,linux,cmake
-# Edit at https://www.toptal.com/developers/gitignore?templates=c++,visualstudiocode,linux,cmake
+# ===============================
+# Game Engine C++ Project Ignore
+# ===============================
 
-### C++ ###
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+### General C++ ###
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-out/
-# Compiled Dynamic libraries
 *.so
-*.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+*.dylib
 *.exe
 *.out
 *.app
+*.a
+*.lib
+*.lai
+*.lo
+*.slo
+*.pch
+*.gch
+*.mod
+*.smod
+*.d
 
-### CMake ###
-CMakeLists.txt.user
+# Temporary files
+*~
+*.swp
+*.tmp
+*.bak
+*.log
+
+### Build / CMake ###
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
+CMakeFiles/
+CMakeScripts/
 cmake_install.cmake
-install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
-_deps
-
-### CMake Patch ###
-CMakeUserPresets.json
-
-# External projects
+Makefile
+CMakeLists.txt.user
+install_manifest.txt
+_deps/
 *-prefix/
 
-### Linux ###
-*~
+# Build output folder
+out/
+bin/
+build/
+dist/
 
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
-
-### VisualStudioCode ###
+### Visual Studio Code ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -77,15 +56,11 @@ CMakeUserPresets.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
-# Local History for Visual Studio Code
 .history/
-
-# Built Visual Studio Code Extensions
 *.vsix
 
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
-
-# End of https://www.toptal.com/developers/gitignore/api/c++,visualstudiocode,linux,cmake
+### Linux / System ###
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
