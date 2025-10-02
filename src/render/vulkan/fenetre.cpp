@@ -2,7 +2,18 @@
 
 class fenetre{
 
+
+
     void init(int l, int h){
         
+
     };
+
+    void libérer(){
+
+    }
+    
+
+
+    
 }
