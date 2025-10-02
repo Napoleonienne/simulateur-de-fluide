@@ -24,3 +24,9 @@ https://blog.seanholloway.com/2021/09/09/fluid-dynamics-simulation-in-c-and-open
 https://www.fmod.com/docs/2.03/api/core-api-concepts.html
 
 https://github.com/ocornut/imgui/wiki
+
+https://www.youtube.com/watch?v=vtWdgtMo1T4&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=2
+
+https://www.youtube.com/playlist?list=PLlrATfBNZ98fqE45g3jZA_hLGUrD4bo6_
+
+https://www.youtube.com/watch?v=OR4fNpBjmq8&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&index=2
