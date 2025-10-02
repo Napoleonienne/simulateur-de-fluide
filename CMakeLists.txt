@@ -40,3 +40,33 @@ if(GLFW_FOUND)
 else()
     message(FATAL_ERROR "GLFW not found. Install it and try again.")
 endif()
+#vulkan
+find_program(GLSLC glslc)
+
+
+if(NOT GLSLC)
+    message(FATAL_ERROR "glslc (Vulkan Shader Compiler) non trouvé. Installez-le via le SDK Vulkan.")
+endif()
+
+set(SHADER_DIR "${CMAKE_CURRENT_SOURCE_DIR}/shaders")
+set(SHADER_OUTPUT_DIR "${CMAKE_CURRENT_BINARY_DIR}/shaders_compiled")
+file(MAKE_DIRECTORY ${SHADER_OUTPUT_DIR})
+set(SHADERS
+    ${SHADER_DIR}/*.vert
+    ${SHADER_DIR}/*.frag
+)
+
+foreach(SHADER ${SHADERS})
+    get_filename_component(SHADER_NAME ${SHADER} NAME)
+    set(SPIRV_OUTPUT "${SHADER_OUTPUT_DIR}/${SHADER_NAME}.spv")
+
+    add_custom_command(
+        OUTPUT ${SPIRV_OUTPUT}
+        COMMAND ${GLSLC} -V ${SHADER} -o ${SPIRV_OUTPUT}
+        DEPENDS ${SHADER}
+        COMMENT "Compilation du shader ${SHADER_NAME} en SPIR-V"
+    )
+    list(APPEND SPIRV_SHADERS ${SPIRV_OUTPUT})
+endforeach()
+
+add_custom_target(Shaders ALL DEPENDS ${SPIRV_SHADERS})
