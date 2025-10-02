@@ -3,7 +3,7 @@ project(FluidEngineProject)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
+find_package(Vulkan REQUIRED)
 # --- Includes ---
 include_directories(
     include
@@ -13,7 +13,6 @@ include_directories(
     externe/imgui/include
     externe/fmodstudioapi20309linux/api/core/inc
 )
-
 # --- Sources ---
 file(GLOB_RECURSE SOURCES
     src/*.cpp
@@ -36,6 +35,7 @@ if(GLFW_FOUND)
         ${GLFW_LIBRARIES}   # glfw
         GL                  # OpenGL
         X11 Xrandr Xi Xxf86vm Xcursor pthread dl m  # dépendances Linux
+        Vulkan::Vulkan 
     )
 else()
     message(FATAL_ERROR "GLFW not found. Install it and try again.")
