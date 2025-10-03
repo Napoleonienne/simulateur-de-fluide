@@ -11,7 +11,6 @@ find_package(Vulkan REQUIRED)
 include_directories(
     include
     ${CMAKE_SOURCE_DIR}/include
-    externe/glad/include
     externe/glm
     externe/imgui/include
     externe/fmodstudioapi20309linux/api/core/inc
@@ -20,9 +19,9 @@ include_directories(
 # --- Sources ---
 file(GLOB_RECURSE SOURCES
     src/*.cpp
-    externe/glad/src/glad.c
     externe/imgui/src
     externe/fmodstudioapi20309linux/api/core/lib
+    include/
 )
 
 # --- Executable ---

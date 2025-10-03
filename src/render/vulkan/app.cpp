@@ -1,21 +1,17 @@
-#include <fenetre.cpp>
+include "app.hpp"
+namespace lve {
+void FirstApp::run() {
 
 
-namespace lve{
-class app{
-public:
-    static constexpr int l = 800;
-    static constexpr int h = 600;
+  while (!lveWindow.shouldClose()) {
+
+    glfwPollEvents();
 
 
-    app(){}
-
-
-    void run()
-    }
-    private:
-    livefenetre liefe(l,h,"hello world");
-
+  }
 
 
 }
+
+
+}  // namespace lve

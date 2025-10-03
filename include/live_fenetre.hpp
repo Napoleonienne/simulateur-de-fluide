@@ -13,8 +13,10 @@ class livefenetre{
         livefenetre(int l, int h,std::string name);
 
         ~livefenetre();
+        livefenetre(const livefenetre &)= delete;
+        livefenetre &operator=(const livefenetre &)= delete;
 
-
+        bool shouldClose() { return glfwWindowShouldClose(fenetre); }
     private:
         void initi();
         const int l;

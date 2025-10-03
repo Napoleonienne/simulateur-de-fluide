@@ -1,15 +1,20 @@
 #pragma once
-#include <fenetre.hpp>
+#include <live_fenetre.hpp>
+
+
 namespace lve{
 class app{
-    app(){}
+  public:
+    static constexpr int l = 800;
+    static constexpr int h = 600;
 
-    void libérer(){}
-
-    void run(){/}
-
-
+    void run(){}
+    private:
+    livefenetre lve();
 
 
-}
-}
+
+
+
+};
+};
