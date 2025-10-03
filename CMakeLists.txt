@@ -3,7 +3,10 @@ project(FluidEngineProject)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# --- Vulkan ---
 find_package(Vulkan REQUIRED)
+
 # --- Includes ---
 include_directories(
     include
@@ -13,6 +16,7 @@ include_directories(
     externe/imgui/include
     externe/fmodstudioapi20309linux/api/core/inc
 )
+
 # --- Sources ---
 file(GLOB_RECURSE SOURCES
     src/*.cpp
@@ -40,33 +44,41 @@ if(GLFW_FOUND)
 else()
     message(FATAL_ERROR "GLFW not found. Install it and try again.")
 endif()
-#vulkan
-find_program(GLSLC glslc)
 
+# --- glslc ---
+find_program(GLSLC glslc)
 
 if(NOT GLSLC)
     message(FATAL_ERROR "glslc (Vulkan Shader Compiler) non trouvé. Installez-le via le SDK Vulkan.")
 endif()
 
+
+
+# --- Shaders ---
 set(SHADER_DIR "${CMAKE_CURRENT_SOURCE_DIR}/shaders")
 set(SHADER_OUTPUT_DIR "${CMAKE_CURRENT_BINARY_DIR}/shaders_compiled")
 file(MAKE_DIRECTORY ${SHADER_OUTPUT_DIR})
-set(SHADERS
+
+file(GLOB SHADERS CONFIGURE_DEPENDS
     ${SHADER_DIR}/*.vert
     ${SHADER_DIR}/*.frag
+    ${SHADER_DIR}/*.comp   # ajout compute shaders
 )
 
+set(SPIRV_SHADERS "")
 foreach(SHADER ${SHADERS})
     get_filename_component(SHADER_NAME ${SHADER} NAME)
     set(SPIRV_OUTPUT "${SHADER_OUTPUT_DIR}/${SHADER_NAME}.spv")
 
     add_custom_command(
         OUTPUT ${SPIRV_OUTPUT}
+        COMMAND ${CMAKE_COMMAND} -E echo "[GLSLC] Compilation : ${SHADER_NAME}"
         COMMAND ${GLSLC} -V ${SHADER} -o ${SPIRV_OUTPUT}
         DEPENDS ${SHADER}
-        COMMENT "Compilation du shader ${SHADER_NAME} en SPIR-V"
     )
+
     list(APPEND SPIRV_SHADERS ${SPIRV_OUTPUT})
 endforeach()
 
-add_custom_target(Shaders ALL DEPENDS ${SPIRV_SHADERS})
+add_custom_target(Shaders DEPENDS ${SPIRV_SHADERS})
+add_dependencies(simulateur_de_fluide Shaders)

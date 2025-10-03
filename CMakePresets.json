@@ -11,6 +11,17 @@
                 "CMAKE_C_COMPILER": "/usr/bin/gcc-12",
                 "CMAKE_BUILD_TYPE": "Debug"
             }
+        },
+        {
+            "name": "mp",
+            "displayName": "GCC 14.2.0 x86_64-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc-14",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-14",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
         }
     ]
 }
