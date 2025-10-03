@@ -1,11 +1,11 @@
-#include <fenetre>
+#include <fenetre.cpp>
 
 class app{
     app(){}
 
     void libérer(){}
 
-    void run(){}
+    void run(){/}
 
 
 
